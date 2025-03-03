@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday, My Love!</title>
+  <!-- Fancy Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Lobster|Pacifico&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #e91e63;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #ff5722;
+    }
+    /* Section Styles */
+    section {
+      padding: 60px 20px;
+      min-height: 100vh;
+    }
+    /* Home Section */
+    .hero {
+      text-align: center;
+      font-family: 'Pacifico', cursive;
+    }
+    .hero h1 {
+      font-size: 60px;
+      color: #d81b60;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 24px;
+      color: #880e4f;
+    }
+    .emoji-container {
+      margin-top: 20px;
+    }
+    .emoji {
+      font-size: 40px;
+      margin: 0 5px;
+      animation: bounce 1.5s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+    .slideshow, .gallery-slideshow {
+      position: relative;
+      width: 80%;
+      max-width: 800px;
+      height: 450px;
+      margin: 40px auto;
+      overflow: hidden;
+      border: 5px solid #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .slide.active {
+      opacity: 1;
+    }
+    /* Love Letter Section */
+    .love-letter-page {
+      max-width: 800px;
+      margin: auto;
+      font-family: 'Great Vibes', cursive;
+      color: #c2185b;
+    }
+    .love-letter {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      font-size: 24px;
+      line-height: 1.6;
+    }
+    /* Video & Voice Sections */
+    .video-page, .voice-page {
+      text-align: center;
+    }
+    .video-page video, .voice-page audio {
+      margin-top: 20px;
+      border: 3px solid #e91e63;
+      border-radius: 10px;
+    }
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(255,255,255,0.8);
+      font-size: 16px;
+      color: #e91e63;
+    }
+    /* Floating Hearts Animation */
+    .floating-hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 9999;
+    }
+    .heart {
+      position: absolute;
+      font-size: 24px;
+      color: #ff4081;
+      animation: float 5s infinite ease-in-out;
+      opacity: 0.8;
+    }
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+      }
+      100% {
+        transform: translateY(-10vh) rotate(360deg);
+      }
+    }
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 40px;
+      }
+      .hero p {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Floating Hearts Container -->
+  <div class="floating-hearts"></div>
+  
+  <!-- Header & Navigation -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#love-letter">Love Letter</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#video-note">Video Note</a></li>
+        <li><a href="#voice-note">Voice Note</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- Main Content -->
+  <main>
+    <!-- Home Section -->
+    <section id="home" class="hero">
+      <h1>Happy Birthday, My Love!</h1>
+      <p>To the most amazing woman in my life, today is all about you!</p>
+      <div class="emoji-container">
+         <span class="emoji">😍</span>
+         <span class="emoji">❤️</span>
+         <span class="emoji">💖</span>
+         <span class="emoji">💐</span>
+      </div>
+      <div class="slideshow">
+        <!-- Replace with your own image paths -->
+        <div class="slide active" style="background-image: url('images/pic1.jpg');"></div>
+        <div class="slide" style="background-image: url('images/pic2.jpg');"></div>
+        <div class="slide" style="background-image: url('images/pic3.jpg');"></div>
+        <div class="slide" style="background-image: url('images/pic4.jpg');"></div>
+      </div>
+    </section>
+    
+    <!-- Love Letter Section -->
+    <section id="love-letter" class="love-letter-page">
+      <h1>My Dearest,</h1>
+      <article class="love-letter">
+        <p>
+          From the moment our paths crossed, my world has been painted in the brightest hues. Every smile, every touch, and every heartbeat is a testament to the infinite love I have for you.
+        </p>
+        <p>
+          Your laughter is the melody that lightens my days, and your kindness is the gentle whisper that soothes my soul. I cherish every moment, every adventure, and every memory we create together.
+        </p>
+        <p>
+          You are not just my wife; you are my best friend, my inspiration, and the love that makes life worth living. I promise to stand by you through every storm and celebrate every joy.
+        </p>
+        <p>
+          Today, on your special day, I want you to know that you are adored beyond words. My love for you is boundless, and every day with you is a beautiful journey.
+        </p>
+        <p>
+          Happy Birthday, my love. May our hearts continue to beat as one, now and forever.
+        </p>
+        <p style="text-align:right; font-style: italic;">
+          Always and forever,<br> Your loving husband.
+        </p>
+      </article>
+    </section>
+    
+    <!-- Gallery Section as a Slideshow -->
+    <section id="gallery" class="gallery-page">
+      <h1>Memories Together</h1>
+      <div class="gallery-slideshow">
+        <!-- Replace with your own image paths -->
+        <div class="slide active" style="background-image: url('images/gallery1.jpg');"></div>
+        <div class="slide" style="background-image: url('images/gallery2.jpg');"></div>
+        <div class="slide" style="background-image: url('images/gallery3.jpg');"></div>
+        <div class="slide" style="background-image: url('images/gallery4.jpg');"></div>
+        <div class="slide" style="background-image: url('images/gallery5.jpg');"></div>
+      </div>
+    </section>
+    
+    <!-- Video Note Section -->
+    <section id="video-note" class="video-page">
+      <h1>A Special Video Message</h1>
+      <!-- Replace with your own video file -->
+      <video controls width="640" height="360">
+        <source src="videos/birthday_message.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+    
+    <!-- Voice Note Section -->
+    <section id="voice-note" class="voice-page">
+      <h1>A Sweet Voice Message</h1>
+      <!-- Replace with your own audio file -->
+      <audio controls>
+        <source src="audio/voice_note.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer>
+    <p>Made with endless love for my wife.</p>
+  </footer>
+  
+  <!-- Inline JavaScript -->
+  <script>
+    // Reusable slideshow setup function for a given container element.
+    function setupSlideshow(container) {
+      if (!container) return;
+      let slides = container.querySelectorAll('.slide');
+      let currentSlide = 0;
+      if (slides.length > 0) {
+        slides[currentSlide].classList.add('active');
+        setInterval(function() {
+          slides[currentSlide].classList.remove('active');
+          currentSlide = (currentSlide + 1) % slides.length;
+          slides[currentSlide].classList.add('active');
+        }, 5000);
+      }
+    }
+    
+    // Setup the home and gallery slideshows separately.
+    setupSlideshow(document.querySelector('.slideshow'));
+    setupSlideshow(document.querySelector('.gallery-slideshow'));
+    
+    /* Floating hearts generator */
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.innerHTML = '❤️';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.top = '100vh';
+      heart.style.animationDuration = 3 + Math.random() * 3 + 's';
+      heart.style.fontSize = 20 + Math.random() * 30 + 'px';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }
+    setInterval(createHeart, 500);
+    
+    /* Surprise message on click */
+    document.addEventListener('click', function(e) {
+      const surprise = document.createElement('div');
+      surprise.textContent = 'Surprise! I love you endlessly!';
+      surprise.style.position = 'fixed';
+      surprise.style.top = e.clientY + 'px';
+      surprise.style.left = e.clientX + 'px';
+      surprise.style.background = 'rgba(255, 255, 255, 0.9)';
+      surprise.style.border = '2px solid #e91e63';
+      surprise.style.padding = '10px 20px';
+      surprise.style.borderRadius = '8px';
+      surprise.style.fontSize = '18px';
+      surprise.style.color = '#c2185b';
+      surprise.style.zIndex = 10000;
+      document.body.appendChild(surprise);
+      setTimeout(() => {
+        surprise.remove();
+      }, 3000);
+    });
+  </script>
+</body>
+</html>
